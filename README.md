@@ -138,4 +138,54 @@
 * **Test Execution:** Logged into the Windows 11 endpoint with an `IT-Department` user account and attempted to open the local Control Panel.
 * **Results Verified:** Access was explicitly blocked by the OS[cite: 54]. A "Restrictions" system prompt appeared stating: *"This operation has been cancelled due to restrictions in effect on this computer. Please contact your system administrator."*
 
+* ### 16. Domain Account Lockout Policy Configuration
+
+![GPO Account Lockout Policy](./screenshots/16-gpo-account-lockout-policy.png)
+* **Objective:** Enforcing brute-force protection by configuring account lockout thresholds at the domain level.
+* **Configuration Details:** Navigated to `Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy` in the Default Domain Policy[cite: 55]. Configured the `Account lockout threshold` to trigger after `3 invalid logon attempts`[cite: 55].
+* **Security Impact:** Mitigates dictionary and brute-force password attacks by disabling the account after consecutive failed authentications.
+
+---
+
+### 17. Client-Side Lockout Verification
+
+![Client Account Locked](./screenshots/17-client-account-locked.jpg)
+* **Objective:** Validating the enforcement of the Account Lockout Policy on a domain-joined endpoint.
+* **Test Execution:** Intentionally entered an incorrect password three consecutive times on the Windows 11 client logon screen.
+* **Results Verified:** The system successfully blocked access, displaying the warning: *"The referenced account is currently locked out and may not be logged on to."*[cite: 56].
+
+---
+
+### 18. Administrative Password Reset & Account Unlock
+
+![ADUC Password Reset](./screenshots/18-aduc-password-reset.png)
+* **Objective:** Performing an administrative password reset and account unlock procedure for a locked-out user.
+* **Action Performed:** Located user `shifa nazrin` within the `IT-Department` OU in ADUC and initiated a password reset[cite: 57].
+* **Configuration Details:** Assigned a new temporary password and enforced the `User must change password at next logon` security requirement[cite: 57].
+
+---
+
+### 19. Password Reset Confirmation
+
+![ADUC Password Reset Success](./screenshots/19-aduc-password-reset-success.png)
+* **Objective:** Verifying the successful application of the administrative password reset command within the AD DS database.
+* **Results Verified:** Received the Active Directory Domain Services confirmation prompt stating *"The password for shifa nazrin has been changed."*[cite: 58].
+
+---
+
+### 20. Enforced Password Change at Next Logon
+
+![Client Force Password Change](./screenshots/20-client-force-password-change.jpg)
+* **Objective:** Validating the mandatory password change policy upon the user's next authentication attempt.
+* **Test Execution:** Attempted to log into the Windows 11 client using the temporary password provided by the administrator.
+* **Results Verified:** The client intercepted the logon, prompting: *"The user's password must be changed before signing in."*[cite: 59].
+
+---
+
+### 21. Successful Authentication & Session Restoration
+
+![Client Successful Logon](./screenshots/21-client-successful-logon.png)
+* **Objective:** Confirming complete restoration of user access following the identity remediation lifecycle.
+* **Results Verified:** The user successfully established a new personalized password and gained access to the Windows 11 desktop[cite: 60]. The Start menu confirms the active session belongs to `shifa nazrin`[cite: 60].
+
   
