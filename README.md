@@ -1,5 +1,20 @@
 # Active-Directory-IAM-Home-Lab
 
+An end-to-end on-premise Windows Server 2022 Active Directory environment demonstrating enterprise Identity and Access Management (IAM), network services provisioning, and Group Policy enforcement.
+
+---
+
+### Project Overview
+This project simulates a corporate IT infrastructure from the ground up. It covers the deployment of a primary Domain Controller (DC), configuration of core network services (DNS, DHCP), and the binding of a Windows 11 client endpoint to the domain. The lab further demonstrates daily IT help desk and sysadmin operations, including Organizational Unit (OU) design, Role-Based Access Control (RBAC) via Security Groups, Group Policy Object (GPO) deployment to restrict client OS settings, and the complete incident remediation lifecycle for brute-force account lockouts and password resets.
+
+### Skills & Technologies Demonstrated
+* **Virtualization:** Oracle VirtualBox, internal network bridging.
+* **Windows Server Administration:** Windows Server 2022, Server Manager, AD DS, DNS, DHCP.
+* **Identity & Access Management (IAM):** Active Directory Users and Computers (ADUC), User Provisioning, Security Groups, Password/Lockout Policies.
+* **Endpoint Management:** Windows 11 Enterprise, Domain Joining, Group Policy Management Console (GPMC), Administrative Templates.
+
+---
+
 ### 1. Virtual Environment Provisioning
 
 ![VirtualBox Setup](./screenshots/01-virtualbox-env-setup.png)
