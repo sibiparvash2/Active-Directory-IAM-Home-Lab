@@ -149,7 +149,7 @@
 
 ### 17. Client-Side Lockout Verification
 
-![Client Account Locked](./screenshots/17-client-account-locked.jpg)
+![Client Account Locked](./screenshots/17-client-account-locked.png)
 * **Objective:** Validating the enforcement of the Account Lockout Policy on a domain-joined endpoint.
 * **Test Execution:** Intentionally entered an incorrect password three consecutive times on the Windows 11 client logon screen.
 * **Results Verified:** The system successfully blocked access, displaying the warning: *"The referenced account is currently locked out and may not be logged on to."*[cite: 56].
@@ -175,7 +175,7 @@
 
 ### 20. Enforced Password Change at Next Logon
 
-![Client Force Password Change](./screenshots/20-client-force-password-change.jpg)
+![Client Force Password Change](./screenshots/20-client-force-password-change.png)
 * **Objective:** Validating the mandatory password change policy upon the user's next authentication attempt.
 * **Test Execution:** Attempted to log into the Windows 11 client using the temporary password provided by the administrator.
 * **Results Verified:** The client intercepted the logon, prompting: *"The user's password must be changed before signing in."*[cite: 59].
