@@ -132,7 +132,7 @@
 
 ### 15. Group Policy Endpoint Verification
 
-![Client GPO Verification](./screenshots/15-client-gpo-verification.jpg)
+![Client GPO Verification](./screenshots/15-client-gpo-verification.png)
 
 * **Objective:** Validating the successful network propagation and enforcement of the deployed GPO on the domain-joined client.
 * **Test Execution:** Logged into the Windows 11 endpoint with an `IT-Department` user account and attempted to open the local Control Panel.
